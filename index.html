@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jobs for Kids</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+        <script>
+        window.onload = function () {
+          //Step 2: Find the canvas
+          var canvas = document.getElementById('myCanvas');
+          //Step 3: Access the 2d context (Make sure you leave the "d" in "2d" lowercase) this is the pen/brush step
+          var ctx = canvas.getContext('2d');
+          //Step 4: Render the graphics (x, y, width, height)
+          ctx.fillStyle ='green';
+          ctx.fillRect(300,200,100,200);
+
+          ctx.fillStyle = 'navy';
+          //x, y, radius, startAngle, endAngle, antiClockwise
+          ctx.arc(100, 100, 50, 0, 1.5 * Math.PI, false);
+          ctx.fill();
+        };
+        </script>
+  </head>
+  <body>
+    <h1>Practicing with Canvas</h1>
+    <!--Step 1: Define the canvas element -->
+    <canvas id="myCanvas" width="600" height="400">
+      Canvas not supported! Upgrade/Switch your browser
+    </canvas>
+
+  </body>
+</html>
